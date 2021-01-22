@@ -15,29 +15,6 @@ namespace Icebreaker.Helpers
     public class UserFeedback : Document
     {
         /// <summary>
-        /// Gets or sets the id of the feedback instance.
-        /// This is also the <see cref="Resource.Id"/>.
-        /// </summary>
-        [JsonProperty("feedbackId")]
-        public string FeedbackId
-        {
-            get { return this.Id; }
-            set { this.Id = value; }
-        }
-
-        /// <summary>
-        /// Gets or sets the tenant id
-        /// </summary>
-        [JsonProperty("tenantId")]
-        public string TenantId { get; set; }
-
-        /// <summary>
-        /// Gets or sets the service URL
-        /// </summary>
-        [JsonProperty("serviceUrl")]
-        public string ServiceUrl { get; set; }
-
-        /// <summary>
         /// Gets or sets the id of the associated
         /// </summary>
         [JsonProperty("teamId")]
