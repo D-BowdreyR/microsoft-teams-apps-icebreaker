@@ -31,7 +31,7 @@
               },
               {
                 "type": "Input.ChoiceSet",
-                "id": "ratings",
+                "id": "rating",
                 "style": "compact",
                 "isMultiSelect": false,
                 "value": "5",
@@ -65,7 +65,7 @@
               },
               {
                 "type": "Input.Text",
-                "id": "text",
+                "id": "comments",
                 "style": "compact",
                 "placeholder": "Tell us your thoughts!",
                 "maxLength": 1000,
@@ -77,7 +77,10 @@
         "actions": [
           {
             "type": "Action.Submit",
-            "title": "Save"
+            "title": "Save",
+            "data": {
+              "action":  "feedback"
+            }
           }
         ]
       }

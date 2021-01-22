@@ -53,12 +53,10 @@ namespace Icebreaker.Interfaces
         /// <summary>
         /// Adds feedback
         /// </summary>
-        /// <param name="tenantId">Tenant id</param>
-        /// <param name="feedbackId">Feedback id</param>
+        /// <param name="feedbackRating">User rating</param>
         /// <param name="feedbackText">Text of user comment</param>
         /// <param name="teamId">Team id</param>
-        /// <param name="serviceUrl">Service URL</param>
         /// <returns>Tracking task</returns>
-        Task AddFeedbackAsync(string tenantId, string feedbackId, string feedbackText, string teamId, string serviceUrl);
+        Task AddFeedbackAsync(string feedbackRating, string feedbackText, string teamId);
     }
 }

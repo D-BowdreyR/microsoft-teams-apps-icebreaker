@@ -44,6 +44,12 @@ namespace Icebreaker.Helpers
         public string TeamId { get; set; }
 
         /// <summary>
+        /// Gets or sets the user's rating
+        /// </summary>
+        [JsonProperty("feedbackRating")]
+        public string FeedbackRating { get; set; }
+
+        /// <summary>
         /// Gets or sets the text of the comment by the user
         /// </summary>
         [JsonProperty("feedbackText")]
