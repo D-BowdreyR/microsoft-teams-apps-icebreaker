@@ -143,6 +143,12 @@ namespace Icebreaker.Bot
 
                         await this.SaveAddedToTeam(message.ServiceUrl, teamId, teamsChannelData.Tenant.Id, personThatAddedBot);
                         await this.WelcomeTeam(turnContext, personThatAddedBot, cancellationToken);
+
+                        var users = await ((BotFrameworkAdapter)turnContext.Adapter).GetConversationMembersAsync(turnContext, cancellationToken);
+                        foreach (var user in users)
+                        {
+                            await this.WelcomeUser(turnContext, user.Id, teamsChannelData.Tenant.Id, teamsChannelData.Team.Id, cancellationToken);
+                        }
                     }
                     else
                     {
